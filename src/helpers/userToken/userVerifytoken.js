@@ -4,7 +4,6 @@ const User = require('../../model/user.model');
 exports.userVerifyToken = async (req, res, next) => { 
     try {
         const authorized = req.headers['authorization'];
-        
         if (typeof authorized !== 'undefined') {
             let token = authorized.split(" ")[1];
             // console.log("Token is => ",token);   
